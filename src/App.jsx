@@ -1,3 +1,6 @@
+import React from 'react';
+import _ from 'lodash';
+
 class App extends React.Component {
   constructor(){
     super();
@@ -93,22 +96,22 @@ class Plant extends React.Component {
   render(){
     const { data, orderBy } = this.props;
     const input = categories; // array from the bottom of this script
-    const output = input.map((item)=>{
-      return <div><small className={ orderBy === item ? "active" : null }>{item}:</small> {data[item] }</div>
-    });
+    // const output = input.map((item)=>{
+    //   return <div><small className={ orderBy === item ? "active" : null }>{item}:</small> {data[item] }</div>
+    // });
     return (    
       <div className="media">
         <h4 className="media-heading">
           <span className={ orderBy === "plant_name" ? "active" : null }>{ data.plant_name } </span> 
           <span className={ orderBy === "plant_type" ? "active" : null }>{ data.plant_type }</span>
         </h4>      
-        <div><small>about:</small> { data.about }</div>
-        {output}
-        <div><small>email:</small> <a href={ data.email }> { data.email } </a></div>
+        <div><small>location:</small> { data.location }</div>
       </div>     
     )
   }
 }
+
+
 const names = [["plant_name", "plant_name"],["plant_type", "plant_type"],["location","location"]]
 const categories = ["plant_type","location"]
 const data = [{"id":1, "plant_name": "banana", "plant_type": "berry", "location": "tree"},
@@ -123,4 +126,4 @@ const data = [{"id":1, "plant_name": "banana", "plant_type": "berry", "location"
 // {"id":10}
 ];
 
-ReactDOM.render(<App/>, document.getElementById("app"))
+export default App;
