@@ -105,25 +105,29 @@ class Plant extends React.Component {
           <span className={ orderBy === "plant_name" ? "active" : null }>{ data.plant_name } </span> 
           <span className={ orderBy === "plant_type" ? "active" : null }>{ data.plant_type }</span>
         </h4>      
-        <div><small>location:</small> { data.location }</div>
+        <div><small>part of plant:</small> { data.part_of_plant }</div>
       </div>     
     )
   }
 }
 
 
-const names = [["plant_name", "plant_name"],["plant_type", "plant_type"],["location","location"]]
-const categories = ["plant_type","location"]
-const data = [{"id":1, "plant_name": "banana", "plant_type": "berry", "location": "tree"},
-{"id":2, "plant_name": "blueberry", "plant_type": "berry", "location": "bush"},
-{"id":3, "plant_name": "carrot", "plant_type": "root/tuber", "location": "root"},
-{"id":4, "plant_name": "apple", "plant_type": "fruit", "location": "tree"},
-// {"id":5},
-// {"id":6},
-// {"id":7},
-// {"id":8},
-// {"id":9},
-// {"id":10}
+const names = [["plant_name", "plant_name"],["plant_type", "plant_type"],["part_of_plant","part_of_plant"], ["location_of_origin","location_of_origin"]]
+const categories = ["plant_type","part_of_plant","location_of_origin"]
+const data = [
+  { id: 1, plant_name: "banana", plant_type: "berry", part_of_plant: "tree", location_of_origin: "south east asia" },
+  { id: 2, plant_name: "carrot", plant_type: "root/tuber", part_of_plant: "root", location_of_origin: "europe" },
+  { id: 3, plant_name: "apple", plant_type: "pome fruit", part_of_plant: "fruit", location_of_origin: "central asia" },
+  { id: 4, plant_name: "spinach", plant_type: "leafy green", part_of_plant: "leaves", location_of_origin: "ancient persia (iran)" },
+  { id: 5, plant_name: "potato", plant_type: "tuber", part_of_plant: "tuber (root)", location_of_origin: "peru and bolivia" },
+  { id: 6, plant_name: "blueberry", plant_type: "berry", part_of_plant: "fruit", location_of_origin: "north america" },
+  { id: 7, plant_name: "almond", plant_type: "nut", part_of_plant: "seed", location_of_origin: "middle east" },
+  { id: 8, plant_name: "pineapple", plant_type: "tropical fruit", part_of_plant: "fruit", location_of_origin: "south america (paraguay, brazil)" },
+  { id: 9, plant_name: "garlic", plant_type: "bulb", part_of_plant: "bulb", location_of_origin: "central asia" },
+  { id: 10, plant_name: "avocado", plant_type: "drupe", part_of_plant: "fruit", location_of_origin: "southern mexico and central america" },
+  { id: 11, plant_name: "lentil", plant_type: "legume", part_of_plant: "seed", location_of_origin: "fertile crescent (near east)" },
+  { id: 12, plant_name: "mango", plant_type: "tropical stone fruit", part_of_plant: "fruit", location_of_origin: "south asia (india, myanmar)" },
+  { id: 13, plant_name: "asparagus", plant_type: "stem vegetable", part_of_plant: "stem", location_of_origin: "eastern mediterranean region" }
 ];
 
 export default App;
