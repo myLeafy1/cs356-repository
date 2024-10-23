@@ -21,7 +21,7 @@
     "start": "cross-env BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b codespace-stunning-space-enigma-rp99gj6xrxvhpwrp -d build",
     "preview": "vite preview",
     "test": "vitest"
   },
